@@ -1,0 +1,30 @@
+import React from 'react'
+import { AiFillStar } from "react-icons/ai";
+
+const FoodCard = ( props) => {
+  return (
+    <div className='font-bold w-[250px] bg-white p-5 flex flex-col rounded-lg gap-2 '>
+      <img src={props.image}      alt="" 
+      className='w-auto h-[130px] overflow-hidden hover:scale-110 cursor-grab transition-all durution-500
+       ease-in-out'
+       />
+      
+      
+      <div className='text-sm  flex justify-between'>
+        <h2>{props.name}</h2>
+        <span className='text-green-500'>₹{props.price}</span>
+        </div>
+          <p className='text-sm font-normal'>{props.desc.slice(0,50)}....</p>
+        
+        <div className='flex  justify-between'>
+          <span className='flex justify-center items-center'>
+          <AiFillStar  className='mr-1 text-yellow-400'/>{props.rating}
+          </span>
+          <button className='p-1 text-white bg-green-500 hover:bg-green-600 rounded-lg text-sm'>Add to cart</button>
+        </div>
+      </div>
+    
+  )
+}
+
+export default FoodCard;
