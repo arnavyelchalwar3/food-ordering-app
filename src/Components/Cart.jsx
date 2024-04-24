@@ -1,6 +1,6 @@
 import React from 'react'
 import { IoMdClose } from "react-icons/io";
-
+import ItemCart from './ItemCart';
 const cart = () => {
   return (
    <>
@@ -11,6 +11,9 @@ const cart = () => {
         p-1 text-x-1 rounded-md hover:text-red-300 hover:border-red-300 
         cursor-pointer '/>
        </div>
+       <ItemCart/>
+       <ItemCart/>
+       <ItemCart/>
         <div className='absolute bottom-0'>
         <h2 className='font-semibold text-gray-800 `'>Items : </h2>
         <h3 className='font-semibold text-gray-800 `'> Total Amount:</h3>
@@ -19,7 +22,7 @@ const cart = () => {
         rounded-lg w-[90vw] lg:w-[18vw] mb-5'>Checlout</button>
     </div>
     </div>
-   
+    
    </> 
   )
 }
